@@ -67,14 +67,14 @@ Create a new Docker container from this image (replace `./vpn.env` with your own
 
 ```
 docker run \
-    --name ipsec-vpn-server \
+    --name vpn \
     --env-file ./vpn.env \
     --restart=always \
     -p 500:500/udp \
     -p 4500:4500/udp \
     -v /lib/modules:/lib/modules:ro \
     -d --privileged \
-    hwdsl2/ipsec-vpn-server
+    tonychengtw/vpn:0.0.1
 ```
 
 ### Retrieve VPN login details
